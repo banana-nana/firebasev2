@@ -1,9 +1,11 @@
 firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
           // User is signed in.
-            var email_id = user.email;
-          
-          alert("Welcome Back " + email_id);
+      
+          document.getElementById("user_div").style.display = "block";
+          document.getElementById("login_div").style.display = "none";
+          document.getElementById("MU").style.display = "none";
+          document.getElementById("Profile").style.display = "none";
 
       
           var user = firebase.auth().currentUser;
